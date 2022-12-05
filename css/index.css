@@ -1,0 +1,16 @@
+select {
+    width: 100px;
+}
+
+button {
+    width: 100px;
+}
+
+input {
+    width: 250px;
+}
+
+hr {
+    float: left;
+    width: 500px;
+}
