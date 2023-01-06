@@ -8,48 +8,58 @@
   <body>
     <div class="main">
         <h3>Umwandeln</h3>
-        <select name="convertFromSelect" id="convertFromSelect">
-        <option value="bin">Binär</option>
-        <option value="dec" selected="selected">Dezimal</option>
-        <option value="oct">Oktal</option>
-        <option value="hex">Hexadezimal</option>
-        </select>
-        <input id="convertFromInput" type="text" name="convertFromInput" value="10"/>
-        <br>
-        <select name="convertToSelect" id="convertToSelect">
+        <div class="input-section">
+          <select name="convertFromSelect" id="convertFromSelect">
           <option value="bin">Binär</option>
-          <option value="dec">Dezimal</option>
+          <option value="dec" selected="selected">Dezimal</option>
           <option value="oct">Oktal</option>
-          <option value="hex" selected="selected">Hexadezimal</option>
-        </select>
-        <input id="convertToInput" type="text" name="convertToInput" value="A" disabled/>
+          <option value="hex">Hexadezimal</option>
+          </select>
+          <input id="convertFromInput" type="text" name="convertFromInput" value="10"/>
+        </div>
+        <br>
+        <div class="input-section">
+          <select name="convertToSelect" id="convertToSelect">
+            <option value="bin">Binär</option>
+            <option value="dec">Dezimal</option>
+            <option value="oct">Oktal</option>
+            <option value="hex" selected="selected">Hexadezimal</option>
+          </select>
+          <input id="convertToInput" type="text" name="convertToInput" value="A" disabled/>
+        </div>
         <button id="convertButton" type="button" onclick="convert()">Umwandeln</button> 
-        
+        <hr>
         <h3>Berechnen</h3>
+        <div class="input-section">
           <select name="calculateSelectValue1" id="calculateSelectValue1">
             <option value="bin">Binär</option>
             <option value="dec" selected="selected">Dezimal</option>
             <option value="oct">Oktal</option>
             <option value="hex">Hexadezimal</option>
+          </select>
+          <input id="calculateInputValue1" type="text" name="calculateInputValue1" value="10"/>
+        </div>
+        <br>
+        <div class="input-section">
+          <select name="calculateSelectValue2" id="calculateSelectValue2">
+            <option value="bin">Binär</option>
+            <option value="dec" selected="selected">Dezimal</option>
+            <option value="oct">Oktal</option>
+            <option value="hex">Hexadezimal</option>
+          </select>
+          <input id="calculateInputValue2" type="text" name="calculateInputValue2" value="10"/>
+        </div>
+        <br>
+        <div class="input-section">
+          <select name="calculateSelectOperator" id="calculateSelectOperator">
+            <option value="plus" selected="selected">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
             </select>
-            <input id="calculateInputValue1" type="text" name="calculateInputValue1" value="10"/>
-            <br>
-            <select name="calculateSelectValue2" id="calculateSelectValue2">
-              <option value="bin">Binär</option>
-              <option value="dec" selected="selected">Dezimal</option>
-              <option value="oct">Oktal</option>
-              <option value="hex">Hexadezimal</option>
-            </select>
-            <input id="calculateInputValue2" type="text" name="calculateInputValue2" value="10"/>
-            <br>
-            <select name="calculateSelectOperator" id="calculateSelectOperator">
-              <option value="plus" selected="selected">+</option>
-              <option value="minus">-</option>
-              <option value="multiply">*</option>
-              <option value="divide">/</option>
-              </select>
-              <input id="calculateInputResult" type="text" name="calculateInputResult" value="20" disabled/>
-            <button id="calculateButton" type="button" onclick="calculate()">Berechnen</button> 
+            <input id="calculateInputResult" type="text" name="calculateInputResult" value="20" disabled/>
+        </div>
+        <button id="calculateButton" type="button" onclick="calculate()">Berechnen</button> 
     </div>
 
     <script src="./src/index.js"></script>
