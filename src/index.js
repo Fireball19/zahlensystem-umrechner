@@ -11,16 +11,26 @@ calculateSelectValue2 = document.getElementById('calculateSelectValue2')
 calculateSelectOperator = document.getElementById('calculateSelectOperator')
 
 function convert() {
-  convertToInput.value = BigInt(
-    convertFromInput.value.toString(getNumeralSystem(convertFromSelect.value), getNumeralSystem(convertToSelect.value)))
-    .toString(getNumeralSystem(convertToSelect.value))
-    .toUpperCase()
+  try {
+    convertToInput.value = BigInt(
+      convertFromInput.value.toString(getNumeralSystem(convertFromSelect.value), 
+      getNumeralSystem(convertToSelect.value)))
+      .toString(getNumeralSystem(convertToSelect.value))
+      .toUpperCase()
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function calculate() {
-  calculateInputResult.value = getResult(calculateSelectOperator.value, BigInt(calculateInputValue1.value), BigInt(calculateInputValue2.value))
-                              .toString(getNumeralSystem(calculateSelectValue2.value))
-                              .toUpperCase()
+  try {
+    calculateInputResult.value = getResult(calculateSelectOperator.value, 
+      BigInt(calculateInputValue1.value), BigInt(calculateInputValue2.value))
+      .toString(getNumeralSystem(calculateSelectValue2.value))
+      .toUpperCase()
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function getNumeralSystem(selectValue) {
